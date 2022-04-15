@@ -53,7 +53,7 @@ function getNodeList($nodeType, $page)
 {
     $nodeTypeId = NodeType::whereSlug($nodeType)->first()->id;
 
-    if(!$nodeTypeId){
+    if (! $nodeTypeId) {
         abort(404, __('Page non trouvée'));
     }
     //@todo gestion 404
