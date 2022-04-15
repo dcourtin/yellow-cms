@@ -3,6 +3,7 @@
 namespace Bdsa\YellowCms\Http\Controllers;
 
 use Bdsa\YellowCms\Models\Node;
+use Bdsa\YellowCms\Http\Controllers\Controller;
 use Bdsa\YellowCms\Models\NodeType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
