@@ -3,16 +3,16 @@
 namespace Dcourtin\YellowCms;
 
 use Dcourtin\YellowCms\Commands\YellowCmsCommand;
-use Spatie\LaravelPackageTools\Package;
-use Spatie\LaravelPackageTools\PackageServiceProvider;
-
 use Dcourtin\YellowCms\View\Components\AdminFormInput;
 use Dcourtin\YellowCms\View\Components\AdminFormSubmit;
+
 use Dcourtin\YellowCms\View\Components\AdminFormTextarea;
 use Dcourtin\YellowCms\View\Components\AdminLayout;
 use Dcourtin\YellowCms\View\Components\AdminLogo;
 use Dcourtin\YellowCms\View\Components\AdminNavigation;
 use Dcourtin\YellowCms\View\Components\Breadcrumb;
+use Spatie\LaravelPackageTools\Package;
+use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class YellowCmsServiceProvider extends PackageServiceProvider
 {
@@ -68,9 +68,8 @@ class YellowCmsServiceProvider extends PackageServiceProvider
             AdminLayout::class,
             AdminLogo::class,
             AdminNavigation::class,
-            Breadcrumb::class
+            Breadcrumb::class,
         ]);
-
     }
 
     public function register()
