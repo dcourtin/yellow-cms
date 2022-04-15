@@ -48,6 +48,7 @@ class AdminNodeController extends Controller
             [
                 'pageTitle' => 'Nouveau contenu de type : '.$nodeType->name,
                 'nodeType' => $nodeType,
+                'node' => new Node()
             ]
         );
     }
