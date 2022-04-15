@@ -9,7 +9,7 @@
     <div class="grid grid-cols-12 border-b border-gray-200">
         <div class="col-span-3">
              <div class="">
-                <x-admin-logo />
+                <x-yellowcms-admin-logo />
             </div>
         </div>
         <div class="col-span-9  ">
@@ -20,10 +20,10 @@
     </div>
     <div class="grid grid-cols-12">
         <div class="col-span-3">
-            <x-admin-navigation></x-admin-navigation>
+            <x-yellowcms-admin-navigation></x-yellowcms-admin-navigation>
         </div>
         <div class="col-span-9">
-            <x-breadcrumb />
+            <x-yellowcms-breadcrumb />
             <div class="p-2">
                 <div class="py-2 font-bold text-2xl border-b-2 border-gray-300 mb-3">
                     {{$pageTitle}}
