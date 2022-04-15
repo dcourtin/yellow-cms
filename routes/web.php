@@ -27,6 +27,9 @@ Route::get('/admin/node_type/edit/{id}', [AdminNodeTypeController::class, 'edit'
 Route::get('/admin/node_type/create', [AdminNodeTypeController::class, 'create'])
         ->name('node_type_create');
 
+Route::get('/admin/node_type/store', [AdminNodeTypeController::class, 'store'])
+        ->name('node_type_store');
+
 /** NODE_FIELDS */
 Route::get('/admin/node_field/index', [AdminNodeFieldController::class, 'index']);
 Route::get('/admin/node_field/show/{id}', [AdminNodeFieldController::class, 'show']);
