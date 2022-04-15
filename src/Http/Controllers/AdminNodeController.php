@@ -2,7 +2,7 @@
 
 namespace Dcourtin\YellowCms\Http\Controllers;
 
-class NodeController extends Controller
+class AdminNodeController extends Controller
 {
     public function nodeList($nodeType, $page, $status = 'publish')
     {
