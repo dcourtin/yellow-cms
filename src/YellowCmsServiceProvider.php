@@ -2,9 +2,9 @@
 
 namespace Dcourtin\YellowCms;
 
+use Dcourtin\YellowCms\Commands\YellowCmsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Dcourtin\YellowCms\Commands\YellowCmsCommand;
 
 class YellowCmsServiceProvider extends PackageServiceProvider
 {

@@ -2,9 +2,9 @@
 
 namespace Dcourtin\YellowCms\Tests;
 
+use Dcourtin\YellowCms\YellowCmsServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Dcourtin\YellowCms\YellowCmsServiceProvider;
 
 class TestCase extends Orchestra
 {
