@@ -1,7 +1,7 @@
 <!-- Order your soul. Reduce your wants. - Augustine -->
 <html>
 <head>
-    <link href="{{asset('assets/js/editor.md/css/editormd.css')}}" rel="stylesheet">
+    <link href="{{asset('yellowcms::yellowcms-assets/js/editor.md/css/editormd.css')}}" rel="stylesheet">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <title>{{$pageTitle}}</title>
 </head>
@@ -33,8 +33,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{asset('yellowcms-assets/js/editor.md/editormd.min.js')}}"></script>
-    <script src="{{asset('yellowcms-assets/js/editor.md/languages/fr.js')}}"></script>
+    <script src="{{asset('yellowcms::yellowcms-assets/js/editor.md/editormd.min.js')}}"></script>
+    <script src="{{asset('yellowcms::yellowcms-assets/js/editor.md/languages/fr.js')}}"></script>
     <script type="text/javascript">
         $(function() {
             var editor = editormd("editormd", {
