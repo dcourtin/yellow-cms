@@ -1,5 +1,5 @@
 <x-yellowcms-admin-layout :pageTitle="$pageTitle??__('Node')">
-   <form method="post" action="{{route('node_store',['id'=>$node->id??null])}}">
+   <form method="post" action="{{route('node_store',['id'=>optional($node)->id??null])}}">
     <div class="grid grid-cols-12">
       <div class="col-span-9">
 
