@@ -1,3 +1,3 @@
-<x-admin-layout :pageTitle="__('Node type')">
+<x-yellowcms-admin-layout :pageTitle="__('Node type')">
     hello world !
-</x-admin-layout>
+</x-yellowcms-admin-layout>

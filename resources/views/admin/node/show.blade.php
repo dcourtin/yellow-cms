@@ -1,3 +1,3 @@
-<x-admin-layout :pageTitle="$pageTitle??__('Node')">
+<x-yellowcms-admin-layout :pageTitle="$pageTitle??__('Node')">
    {{$node->title}}
-</x-admin-layout>
+</x-yellowcms-admin-layout>
