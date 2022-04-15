@@ -16,7 +16,6 @@ class NodeController extends Controller
 
     public function nodeShow($nodeType, $nodeSlug)
     {
-        //la fonction node est issu du fichier app\helpers
         return view("nodes/$nodeType/show", ['node' => getNode($nodeType, $nodeSlug)]);
     }
 }
