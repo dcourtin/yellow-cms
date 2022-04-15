@@ -1,7 +1,8 @@
 <x-yellowcms-admin-layout :pageTitle="$pageTitle??__('Node')">
+   <form method="post" action="{{route('node_store',['id'=>$node->id??null])}}">
     <div class="grid grid-cols-12">
       <div class="col-span-9">
-         <form method="post" action="{{route('node_store',['id'=>$node->id??null])}}">
+
          @csrf
 
          @isset($nodeType)
@@ -12,10 +13,16 @@
          <x-yellowcms-admin-form-textarea description="Ajouter un wysisyg gratuit." required="required" label="Contenu" :value="$node->content??''" name="content"/>
 
          <x-yellowcms-admin-form-submit />
-      </form>
+
       </div>
       <div class="col-span-3">
-         Espace dispo
+         <select name="status">
+            <option value="published">{{__('Publié')}}</option>
+            <option value="private">{{__('Private')}}</option>
+            <option value="draft">{{__('Brouillon')}}</option>
+            <option value="trash">{{__('Corbeille')}}</option>
+         </select>
       </div>
     </div>
+    </form>
 </x-yellowcms-admin-layout>
