@@ -3,7 +3,6 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
-use App\View\Components\AdminFormInput;
 
 class AdminFormTextarea extends AdminFormInput
 {
@@ -14,13 +13,14 @@ class AdminFormTextarea extends AdminFormInput
      */
     public function render()
     {
-        return view('components.admin-form-textarea',
+        return view(
+            'components.admin-form-textarea',
             [
                 'label' => $this->label,
-                'name'  => $this->name,
+                'name' => $this->name,
                 'value' => $this->value,
                 'description' => $this->description,
-                'required' => $this->required
+                'required' => $this->required,
             ]
         );
     }

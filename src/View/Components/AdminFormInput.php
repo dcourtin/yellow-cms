@@ -11,20 +11,21 @@ class AdminFormInput extends Component
     protected $type;
     protected $value;
     protected $description;
-    protected $required='';
+    protected $required = '';
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($label,$name,$type='text',$value='',$required='',$description='')
+    public function __construct($label, $name, $type = 'text', $value = '', $required = '', $description = '')
     {
-        $this->label=$label;
-        $this->name=$name;
-        $this->type=$type;
-        $this->value=$value;
-        $this->required=$required;
-        $this->description=$description;
+        $this->label = $label;
+        $this->name = $name;
+        $this->type = $type;
+        $this->value = $value;
+        $this->required = $required;
+        $this->description = $description;
     }
 
     /**
@@ -34,14 +35,15 @@ class AdminFormInput extends Component
      */
     public function render()
     {
-        return view('components.admin-form-input',
+        return view(
+            'components.admin-form-input',
             [
                 'label' => $this->label,
-                'name'  => $this->name,
-                'type'  => $this->type,
+                'name' => $this->name,
+                'type' => $this->type,
                 'value' => $this->value,
                 'description' => $this->description,
-                'required' => $this->required
+                'required' => $this->required,
             ]
         );
     }
