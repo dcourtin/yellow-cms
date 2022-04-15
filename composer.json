@@ -1,8 +1,8 @@
 {
     "name": "dcourtin/yellow-cms",
-    "description": ":package_description",
+    "description": "A CMS for laravel",
     "keywords": [
-        ":vendor_name",
+        "dcourtin",
         "laravel",
         "yellow-cms"
     ],
