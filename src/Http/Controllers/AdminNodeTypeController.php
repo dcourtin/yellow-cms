@@ -14,7 +14,7 @@ class AdminNodeTypeController extends Controller
      */
     public function index()
     {
-        return view('node_type/index', ['nodeTypes' => NodeType::all()]);
+        return view('admin/node_type/index', ['nodeTypes' => NodeType::all()]);
     }
 
     /**
@@ -46,7 +46,7 @@ class AdminNodeTypeController extends Controller
      */
     public function show($id)
     {
-        return view('node_type/show', ['nodeType' => NodeType::find($id)]);
+        return view('admin/node_type/show', ['nodeType' => NodeType::find($id)]);
     }
 
     /**
@@ -57,7 +57,7 @@ class AdminNodeTypeController extends Controller
      */
     public function edit($id)
     {
-        return view('node_type/edit', ['nodeType' => NodeType::find($id)]);
+        return view('admin/node_type/edit', ['nodeType' => NodeType::find($id)]);
     }
 
     /**
@@ -69,7 +69,7 @@ class AdminNodeTypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return view('node_type/edit', ['nodeType' => NodeType::find($id)]);
+        return view('admin/node_type/edit', ['nodeType' => NodeType::find($id)]);
     }
 
     /**
