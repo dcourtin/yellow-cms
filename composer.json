@@ -11,7 +11,7 @@
             "type": "vcs",
             "url": "https://github.com/dcourtin/yellow-cms"
         }
-    ]
+    ],
     "homepage": "https://github.com/dcourtin/yellow-cms",
     "license": "MIT",
     "authors": [
