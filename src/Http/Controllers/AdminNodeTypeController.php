@@ -24,7 +24,12 @@ class AdminNodeTypeController extends Controller
      */
     public function create()
     {
-        //
+        return view(
+            'yellowcms::admin/node_type/edit',
+            [
+                'pageTitle' => 'Nouveau type de contenu'
+            ]
+        );
     }
 
     /**
@@ -35,7 +40,18 @@ class AdminNodeTypeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($id = $request->get('id')) {
+            $nodeType = NodeType::findOrFail($id);
+        } else {
+            $nodeType = new NodeType();
+        }
+
+        $nodeType->name = $request->get('name');
+        $node->slug = $request->get('slug') ?? Str::slug($node->title);
+        $node->description = $request->get('description');
+        $node->save();
+
+        return redirect()->route('node_type_show', ['id' => $nodeType->id]);
     }
 
     /**
