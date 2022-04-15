@@ -27,7 +27,6 @@ class YellowCmsServiceProvider extends PackageServiceProvider
 
     public function boot()
     {
-
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
         $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
         $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'yellowcms');
@@ -35,7 +34,7 @@ class YellowCmsServiceProvider extends PackageServiceProvider
 
         $this->publishes([
             __DIR__.'/../config/yellow-cms.php' => config_path('yellow-cms.php'),
-        ],'yellowcms-config');
+        ], 'yellowcms-config');
 
         $this->publishes([
             __DIR__.'/../resources/lang' => resource_path('lang/vendor/yellowcms'),
@@ -50,7 +49,7 @@ class YellowCmsServiceProvider extends PackageServiceProvider
         ], 'yellowcms-public');
 
         $this->publishes([
-            __DIR__.'/../database/migrations/' => database_path('migrations')
+            __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], 'yellowcms-migrations');
 
         /*
@@ -64,7 +63,8 @@ class YellowCmsServiceProvider extends PackageServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/yellow-cms.php', 'yellowcms'
+            __DIR__.'/../config/yellow-cms.php',
+            'yellowcms'
         );
     }
 }
