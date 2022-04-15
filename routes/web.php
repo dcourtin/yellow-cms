@@ -5,20 +5,16 @@ use Dcourtin\YellowCms\Http\Controllers\AdminNodeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeTypeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeFieldController;
 
-Route::get('/{nodeType}/{page?}/index',[NodeController::class, 'nodeList'])->name('nodeList');
+Route::get('/{nodeType}/{page?}/index',[NodeController::class, 'nodeList'])
+        ->where('page', '[0-9]+')
+        ->name('nodeList');
+
 Route::get('/{nodeType}/{nodeSlug}/show',[NodeController::class, 'nodeShow'])->name('nodeShow');
 
-/*
-Route::get('/admin/{nodeType}/{page?}/index',
-        [NodeAdminController::class, 'nodeList'])
-    ->name('adminNodeList');
-Route::get('/admin/{nodeType}/{nodeSlug}/show',
-        [NodeAdminController::class, 'nodeShow'])
-    ->name('adminNodeShow');
-*/
-
 Route::get('/admin/node_type/index', [AdminNodeTypeController::class, 'index'])->name('node_type_index');
-Route::get('/admin/node_type/show/{id}', [AdminNodeTypeController::class, 'show'])->name('node_type_show');
+Route::get('/admin/node_type/show/{id}', [AdminNodeTypeController::class, 'show'])
+        ->where('id', '[0-9]+')
+        ->name('node_type_show');
 
 Route::get('/admin/node_field/index', [AdminNodeFieldController::class, 'index']);
 Route::get('/admin/node_field/show/{id}', [AdminNodeFieldController::class, 'show']);
