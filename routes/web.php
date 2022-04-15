@@ -26,5 +26,5 @@ Route::get('/admin/node_field/show/{id}', [AdminNodeFieldController::class, 'sho
 Route::get('/admin/node/index/{node_type_id}', [AdminNodeController::class, 'index'])->name('node_index');
 Route::get('/admin/node/show/{id}', [AdminNodeController::class, 'show'])->name('node_show');
 Route::get('/admin/node/edit/{id}', [AdminNodeController::class, 'edit'])->name('node_edit');
-Route::get('/admin/node/create/{node_type_id}', [NodeController::class, 'create'])->name('node_create');
+Route::get('/admin/node/create/{node_type_id}', [AdminNodeController::class, 'create'])->name('node_create');
 Route::post('/admin/node/store', [AdminNodeController::class,'store'])->name('node_store');
