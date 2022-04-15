@@ -28,7 +28,7 @@ class AdminNodeController extends Controller
             }
         }
 
-        return view('node/index', [
+        return view('admin/node/index', [
             'pageTitle' => isset($nodeType) ? $nodeType->name : 'Nodes',
             'nodes' => $nodes,
         ]);
@@ -87,7 +87,7 @@ class AdminNodeController extends Controller
         return redirect()->route('node_edit', ['id' => $id]);
         $node = Node::findOrFail($id);
 
-        return view('node/show', ['node' => $node]);
+        return view('admin/node/show', ['node' => $node]);
     }
 
     /**
@@ -101,7 +101,7 @@ class AdminNodeController extends Controller
         $node = Node::findOrFail($id);
 
         return view(
-            'node/edit',
+            'admin/node/edit',
             [
             'pageTitle' => $node->title ,
             'node' => $node, ]
