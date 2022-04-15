@@ -2,8 +2,8 @@
 
 #namespace App\Helper;
 
-use App\Models\Node;
-use App\Models\NodeType;
+use Dcourtin\YellowCms\Models\Node;
+use Dcourtin\YellowCms\Models\NodeType;
 
 function nodeListRoute($nodeType, $page)
 {
