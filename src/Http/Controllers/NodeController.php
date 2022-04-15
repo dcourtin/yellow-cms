@@ -2,6 +2,7 @@
 
 namespace Dcourtin\YellowCms\Http\Controllers;
 
+use Illuminate\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class NodeController extends Controller
