@@ -1,22 +1,22 @@
 {
-    "name": ":vendor_slug/:package_slug",
+    "name": "dcourtin/yellow-cms",
     "description": ":package_description",
     "keywords": [
         ":vendor_name",
         "laravel",
-        ":package_slug"
+        "yellow-cms"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/dcourtin/yellow-cms",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "dcourtin",
+            "email": "dcourtin@ik.me",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^7.4",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^9.0"
     },
@@ -34,13 +34,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Dcourtin\\YellowCms\\": "src",
+            "Dcourtin\\YellowCms\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Dcourtin\\YellowCms\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -54,10 +54,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Dcourtin\\YellowCms\\YellowCmsServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "YellowCms": "Dcourtin\\YellowCms\\Facades\\YellowCms"
             }
         }
     },
