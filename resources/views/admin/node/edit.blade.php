@@ -17,7 +17,7 @@
       </div>
       <div class="col-span-3">
          <label class=" m-2">{{__('État')}}
-            <select name="status" class="p-2 w-full border-gray-200">
+            <select name="status" class="m-2 p-2 w-full border-gray-200">
                <option {{$node->status=='published'?'selected':''}} value="published">{{__('Publié')}}</option>
                <option {{$node->status=='private'?'selected':''}} value="private">{{__('Private')}}</option>
                <option {{$node->status=='draft'?'selected':''}} value="draft">{{__('Brouillon')}}</option>
