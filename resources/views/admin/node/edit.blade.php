@@ -26,8 +26,8 @@
                </select>
             </label>
          </div>
-         <div class="m-2">
-            <x-yellowcms-admin-form-submit />
+         <div class="mt-4 m-2 flex justify-center">
+            <x-yellowcms-admin-form-submit class="w-full" />
          </div>
       </div>
     </div>
