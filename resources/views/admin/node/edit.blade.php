@@ -16,7 +16,7 @@
 
       </div>
       <div class="col-span-3">
-         <select name="status">
+         <select name="status" class="p-1 w-full m-1 border-gray500">
             <option value="published">{{__('Publié')}}</option>
             <option value="private">{{__('Private')}}</option>
             <option value="draft">{{__('Brouillon')}}</option>
