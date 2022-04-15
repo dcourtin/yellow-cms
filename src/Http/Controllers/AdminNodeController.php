@@ -2,9 +2,9 @@
 
 namespace Bdsa\YellowCms\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Bdsa\YellowCms\Models\Node;
 use Bdsa\YellowCms\Models\NodeType;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class AdminNodeController extends Controller
@@ -18,19 +18,19 @@ class AdminNodeController extends Controller
     {
         $orderBy = 'created_at';
         $order = 'DESC';
-        if($nodeTypeId){
-            $nodeQuery = Node::where(['node_type_id'=>$nodeTypeId]);
-            $nodeType  = NodeType::find($nodeTypeId);
-            if($order == 'DESC'){
+        if ($nodeTypeId) {
+            $nodeQuery = Node::where(['node_type_id' => $nodeTypeId]);
+            $nodeType = NodeType::find($nodeTypeId);
+            if ($order == 'DESC') {
                 $nodes = $nodeQuery->orderByDesc($orderBy)->get();
-            }else{
+            } else {
                 $nodes = $nodeQuery->orderBy($orderBy)->get();
-            }   
+            }
         }
 
         return view('node/index', [
-            'pageTitle' => isset($nodeType)?$nodeType->name:'Nodes',
-            'nodes'=>$nodes
+            'pageTitle' => isset($nodeType) ? $nodeType->name : 'Nodes',
+            'nodes' => $nodes,
         ]);
     }
 
@@ -43,10 +43,11 @@ class AdminNodeController extends Controller
     {
         $nodeType = NodeType::findOrFail($nodeTypeId);
 
-        return view('node/edit',
+        return view(
+            'node/edit',
             [
                 'pageTitle' => 'Nouveau contenu de type : '.$nodeType->name,
-                'nodeType' => $nodeType
+                'nodeType' => $nodeType,
             ]
         );
     }
@@ -59,20 +60,20 @@ class AdminNodeController extends Controller
      */
     public function store(Request $request)
     {
-        if($id=$request->get('id')){
+        if ($id = $request->get('id')) {
             $node = Node::findOrFail($id);
-        }else{
+        } else {
             $node = new Node();
             $node->node_type_id = $request->get('node_type_id');
         }
-        
+
         $node->title = $request->get('title');
-        $node->slug  = $request->get('slug')??Str::slug($node->title);
+        $node->slug = $request->get('slug') ?? Str::slug($node->title);
         $node->content = $request->get('content');
-        $node->status  = $request->get('status','draft');
+        $node->status = $request->get('status', 'draft');
         $node->save();
 
-        return redirect()->route('node_show', ['id'=>$node->id]);
+        return redirect()->route('node_show', ['id' => $node->id]);
     }
 
     /**
@@ -82,10 +83,11 @@ class AdminNodeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {   
-        return redirect()->route('node_edit',['id'=>$id]);
+    {
+        return redirect()->route('node_edit', ['id' => $id]);
         $node = Node::findOrFail($id);
-        return view('node/show', ['node'=>$node]);
+
+        return view('node/show', ['node' => $node]);
     }
 
     /**
@@ -97,9 +99,12 @@ class AdminNodeController extends Controller
     public function edit($id)
     {
         $node = Node::findOrFail($id);
-        return view('node/edit', [
+
+        return view(
+            'node/edit',
+            [
             'pageTitle' => $node->title ,
-            'node'=>$node]
+            'node' => $node, ]
         );
     }
 

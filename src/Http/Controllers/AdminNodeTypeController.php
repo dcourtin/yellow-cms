@@ -2,8 +2,8 @@
 
 namespace Bdsa\YellowCms\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Bdsa\YellowCms\Models\NodeType;
+use Illuminate\Http\Request;
 
 class AdminNodeTypeController extends Controller
 {
@@ -81,6 +81,7 @@ class AdminNodeTypeController extends Controller
     public function destroy($id)
     {
         NodeType::find($id)->delete();
-        return redirect()->route('node_type_index')->with('success','Node type deleted!');
+
+        return redirect()->route('node_type_index')->with('success', 'Node type deleted!');
     }
 }
