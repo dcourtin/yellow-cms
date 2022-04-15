@@ -27,7 +27,7 @@ class AdminNodeTypeController extends Controller
         return view(
             'yellowcms::admin/node_type/edit',
             [
-                'pageTitle' => 'Nouveau type de contenu'
+                'pageTitle' => 'Nouveau type de contenu',
             ]
         );
     }
