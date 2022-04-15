@@ -40,7 +40,7 @@ function getNode($nodeType, $nodeSlug)
     $node = Node::where(['slug' => $nodeSlug,'id' => $nodeTypeId])->first();
 
     if (! $node) {
-        abort(404, 'Page non trouvée');
+        abort(404, __('Page non trouvée'));
     }
 
     return $node;
@@ -52,6 +52,10 @@ function getNode($nodeType, $nodeSlug)
 function getNodeList($nodeType, $page)
 {
     $nodeTypeId = NodeType::whereSlug($nodeType)->first()->id;
+
+    if(!$nodeTypeId){
+        abort(404, __('Page non trouvée'));
+    }
     //@todo gestion 404
     $nodes = Node::where(['id' => $nodeTypeId])->get();
 
