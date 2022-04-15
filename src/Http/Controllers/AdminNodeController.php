@@ -2,8 +2,8 @@
 
 namespace Dcourtin\YellowCms\Http\Controllers;
 
+
 use Dcourtin\YellowCms\Models\Node;
-use Dcourtin\YellowCms\Http\Controllers\Controller;
 use Dcourtin\YellowCms\Models\NodeType;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
