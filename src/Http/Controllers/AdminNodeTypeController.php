@@ -4,6 +4,7 @@ namespace Dcourtin\YellowCms\Http\Controllers;
 
 use Dcourtin\YellowCms\Models\NodeType;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class AdminNodeTypeController extends Controller
 {
