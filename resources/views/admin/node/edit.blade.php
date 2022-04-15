@@ -8,9 +8,9 @@
          @isset($nodeType)
          <x-yellowcms-admin-form-input  type="hidden" label="node_type_id" :value="$nodeType->id" name="node_type_id" />
          @endisset
-         <x-yellowcms-admin-form-input description="Les meilleurs titres sont les plus courts, faites simple et efficace." required="required" label="Titre" :value="$node->title??''" name="title" />
-         <x-yellowcms-admin-form-input description="Laissez ce champ vide pour le générer automatiquement." label="Slug" :value="$node->slug??''" name="slug" />
-         <x-yellowcms-admin-form-textarea description="Ajouter un wysisyg gratuit." required="required" label="Contenu" :value="$node->content??''" name="content"/>
+         <x-yellowcms-admin-form-input description="Les meilleurs titres sont les plus courts, faites simple et efficace." required="required" label="Titre" :value="optional($node)->title??''" name="title" />
+         <x-yellowcms-admin-form-input description="Laissez ce champ vide pour le générer automatiquement." label="Slug" :value="optional($node)->slug??''" name="slug" />
+         <x-yellowcms-admin-form-textarea description="Ajoutez votre contenu ici" required="required" label="Contenu" :value="optional($node)->content??''" name="content"/>
 
 
 
