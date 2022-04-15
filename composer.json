@@ -42,7 +42,10 @@
         "psr-4": {
             "Dcourtin\\YellowCms\\": "src",
             "Dcourtin\\YellowCms\\Database\\Factories\\": "database/factories"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
