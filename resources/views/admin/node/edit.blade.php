@@ -17,7 +17,14 @@
       </div>
       <div class="col-span-3">
          <div class="m-2">
-
+            <label class=" ">{{__('État')}}
+               <select name="status" class="  p-2 w-full border-gray-200">
+                  <option {{optional($node)->status=='published'?'selected':''}} value="published">{{__('Publié')}}</option>
+                  <option {{optional($node)->status=='private'?'selected':''}} value="private">{{__('Private')}}</option>
+                  <option {{optional($node)->status=='draft'?'selected':''}} value="draft">{{__('Brouillon')}}</option>
+                  <option {{optional($node)->status=='trash'?'selected':''}} value="trash">{{__('Corbeille')}}</option>
+               </select>
+            </label>
          </div>
          <div class="mt-4 m-2 flex justify-center">
             <x-yellowcms-admin-form-submit class="w-full" />
