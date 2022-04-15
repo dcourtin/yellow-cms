@@ -42,7 +42,7 @@
                 height : "600px",
                 tocm : true,
                 toc : true,
-                path   : "{{asset('/vendor/yellowcms/assets/js/editor.md/lib/')}}"
+                path   : '/vendor/yellowcms/assets/js/editor.md/lib/'
             });
         });
     </script>
