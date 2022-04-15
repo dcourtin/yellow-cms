@@ -4,8 +4,6 @@ namespace Dcourtin\YellowCms\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Dcourtin\YellowCms\Models\NodeType;
-use Dcourtin\YellowCms\Models\NodeField;
 
 class Node extends Model
 {
@@ -22,19 +20,18 @@ class Node extends Model
     }
 
     public function nodeFields()
-    { 
+    {
         return $this->hasMany(NodeField::class);
     }
 
     public function getField($fieldName)
     {
         $field = $this->nodeFields()->where([
-            'field_name' => $fieldName
+            'field_name' => $fieldName,
         ])->first();
-    
-        
+
+
 
         return $field;
     }
-
 }
