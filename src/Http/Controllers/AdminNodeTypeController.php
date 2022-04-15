@@ -1,8 +1,8 @@
 <?php
 
-namespace Bdsa\YellowCms\Http\Controllers;
+namespace Dcourtin\YellowCms\Http\Controllers;
 
-use Bdsa\YellowCms\Models\NodeType;
+use Dcourtin\YellowCms\Models\NodeType;
 use Illuminate\Http\Request;
 
 class AdminNodeTypeController extends Controller

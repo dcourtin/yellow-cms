@@ -1,6 +1,6 @@
 <?php
 
-namespace Bdsa\YellowCms\Http\Controllers;
+namespace Dcourtin\YellowCms\Http\Controllers;
 
 use Illuminate\Http\Request;
 
