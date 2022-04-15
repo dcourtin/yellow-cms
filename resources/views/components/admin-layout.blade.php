@@ -33,8 +33,8 @@
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="{{asset('assets/js/editor.md/editormd.min.js')}}"></script>
-    <script src="{{asset('assets/js/editor.md/languages/fr.js')}}"></script>
+    <script src="{{asset('yellowcms-assets/js/editor.md/editormd.min.js')}}"></script>
+    <script src="{{asset('yellowcms-assets/js/editor.md/languages/fr.js')}}"></script>
     <script type="text/javascript">
         $(function() {
             var editor = editormd("editormd", {
@@ -42,7 +42,7 @@
                 height : "600px",
                 tocm : true,
                 toc : true,
-                path   : "/demowebsite/public/assets/js/editor.md/lib/"
+                path   : "/yellowcms-assets/js/editor.md/lib/"
             });
         });
     </script>
