@@ -6,6 +6,14 @@ use Dcourtin\YellowCms\Commands\YellowCmsCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
+use Dcourtin\YellowCms\View\Components\AdminFormInput;
+use Dcourtin\YellowCms\View\Components\AdminFormSubmit;
+use Dcourtin\YellowCms\View\Components\AdminFormTextarea;
+use Dcourtin\YellowCms\View\Components\AdminLayout;
+use Dcourtin\YellowCms\View\Components\AdminLogo;
+use Dcourtin\YellowCms\View\Components\AdminNavigation;
+use Dcourtin\YellowCms\View\Components\Breadcrumb;
+
 class YellowCmsServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
@@ -52,12 +60,17 @@ class YellowCmsServiceProvider extends PackageServiceProvider
             __DIR__.'/../database/migrations/' => database_path('migrations'),
         ], 'yellowcms-migrations');
 
-        /*
+
         $this->loadViewComponentsAs('yellowcms', [
-            Alert::class,
-            Button::class,
+            AdminFormInput::class,
+            AdminFormSubmit::class,
+            AdminFormTextarea::class,
+            AdminLayout::class,
+            AdminLogo::class,
+            AdminNavigation::class,
+            Breadcrumb::class
         ]);
-         */
+
     }
 
     public function register()
