@@ -103,8 +103,9 @@ class AdminNodeController extends Controller
         return view(
             'yellowcms::admin/node/edit',
             [
-            'pageTitle' => $node->title ,
-            'node' => $node, ]
+                'pageTitle' =>  $node->title ,
+                'node' =>  $node
+            ]
         );
     }
 
