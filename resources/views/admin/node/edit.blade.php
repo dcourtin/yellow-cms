@@ -12,18 +12,23 @@
          <x-yellowcms-admin-form-input description="Laissez ce champ vide pour le générer automatiquement." label="Slug" :value="$node->slug??''" name="slug" />
          <x-yellowcms-admin-form-textarea description="Ajouter un wysisyg gratuit." required="required" label="Contenu" :value="$node->content??''" name="content"/>
 
-         <x-yellowcms-admin-form-submit />
+
 
       </div>
       <div class="col-span-3">
-         <label class=" m-2">{{__('État')}}
-            <select name="status" class="m-2 p-2 w-full border-gray-200">
-               <option {{$node->status=='published'?'selected':''}} value="published">{{__('Publié')}}</option>
-               <option {{$node->status=='private'?'selected':''}} value="private">{{__('Private')}}</option>
-               <option {{$node->status=='draft'?'selected':''}} value="draft">{{__('Brouillon')}}</option>
-               <option {{$node->status=='trash'?'selected':''}} value="trash">{{__('Corbeille')}}</option>
-            </select>
-         </label>
+         <div class="m-2">
+            <label class=" ">{{__('État')}}
+               <select name="status" class="  p-2 w-full border-gray-200">
+                  <option {{$node->status=='published'?'selected':''}} value="published">{{__('Publié')}}</option>
+                  <option {{$node->status=='private'?'selected':''}} value="private">{{__('Private')}}</option>
+                  <option {{$node->status=='draft'?'selected':''}} value="draft">{{__('Brouillon')}}</option>
+                  <option {{$node->status=='trash'?'selected':''}} value="trash">{{__('Corbeille')}}</option>
+               </select>
+            </label>
+         </div>
+         <div class="m-2">
+            <x-yellowcms-admin-form-submit />
+         </div>
       </div>
     </div>
     </form>
