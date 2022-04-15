@@ -7,12 +7,13 @@ use Illuminate\View\Component;
 class AdminLayout extends Component
 {
     private $pageTitle;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($pageTitle="")
+    public function __construct($pageTitle = "")
     {
         $this->pageTitle = $pageTitle;
     }
@@ -26,7 +27,7 @@ class AdminLayout extends Component
     {
         return view('components.admin-layout', [
             'pageTitle' => $this->pageTitle,
-            'quote' => \Illuminate\Foundation\Inspiring::quote()
+            'quote' => \Illuminate\Foundation\Inspiring::quote(),
         ]);
     }
 }
