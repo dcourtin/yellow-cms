@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace Dcourtin\YellowCms\View\Components;
 
 use Illuminate\View\Component;
 
@@ -36,7 +36,7 @@ class AdminFormInput extends Component
     public function render()
     {
         return view(
-            'components.admin-form-input',
+            'yellowcms::components.admin-form-input',
             [
                 'label' => $this->label,
                 'name' => $this->name,

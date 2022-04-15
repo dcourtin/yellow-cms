@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace Dcourtin\YellowCms\View\Components;
 
 use Illuminate\View\Component;
 
@@ -25,7 +25,7 @@ class AdminLayout extends Component
      */
     public function render()
     {
-        return view('components.admin-layout', [
+        return view('yellowcms::components.admin-layout', [
             'pageTitle' => $this->pageTitle,
             'quote' => \Illuminate\Foundation\Inspiring::quote(),
         ]);

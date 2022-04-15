@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace Dcourtin\YellowCms\View\Components;
 
 use Illuminate\View\Component;
 
@@ -23,6 +23,6 @@ class AdminFormSubmit extends Component
      */
     public function render()
     {
-        return view('components.admin-form-submit');
+        return view('yellowcms::components.admin-form-submit');
     }
 }

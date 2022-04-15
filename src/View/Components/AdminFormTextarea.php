@@ -1,6 +1,6 @@
 <?php
 
-namespace App\View\Components;
+namespace Dcourtin\YellowCms\View\Components;
 
 use Illuminate\View\Component;
 
@@ -14,7 +14,7 @@ class AdminFormTextarea extends AdminFormInput
     public function render()
     {
         return view(
-            'components.admin-form-textarea',
+            'yellowcms::components.admin-form-textarea',
             [
                 'label' => $this->label,
                 'name' => $this->name,

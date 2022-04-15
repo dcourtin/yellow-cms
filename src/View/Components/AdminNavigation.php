@@ -1,8 +1,8 @@
 <?php
 
-namespace App\View\Components;
+namespace Dcourtin\YellowCms\View\Components;
 
-use App\Models\NodeType;
+use Dcourtin\YellowCms\Models\NodeType;
 use Illuminate\View\Component;
 
 class AdminNavigation extends Component
@@ -26,7 +26,7 @@ class AdminNavigation extends Component
      */
     public function render()
     {
-        return view('components.admin-navigation', [
+        return view('yellowcms::components.admin-navigation', [
             'nodeTypes' => $this->nodeTypes,
         ]);
     }
