@@ -5,7 +5,7 @@ namespace Bdsa\YellowCms\Http\Controllers;
 use Illuminate\Http\Request;
 use Bdsa\YellowCms\Models\NodeType;
 
-class NodeTypeController extends Controller
+class AdminNodeTypeController extends Controller
 {
     /**
      * Display a listing of the resource.

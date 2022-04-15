@@ -7,7 +7,7 @@ use Bdsa\YellowCms\Models\Node;
 use Bdsa\YellowCms\Models\NodeType;
 use Illuminate\Support\Str;
 
-class NodeController extends Controller
+class AdminNodeController extends Controller
 {
     /**
      * Display a listing of the resource.
