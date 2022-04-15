@@ -62,7 +62,17 @@ function getNodeList($nodeType, $page)
     return $nodes;
 }
 
+/**
+ * @deprecated Use yellowHook instead
+ * @param  [type] $hook [description]
+ * @return [type]       [description]
+ */
 function hook($hook)
 {
-    echo $hook;
+    return yellowHook($hook);
+}
+
+function yellowHook($hook)
+{
+    //echo $hook;
 }
