@@ -42,7 +42,7 @@ function getNode($nodeType, $nodeSlug)
     $nodeTypeId = NodeType::whereSlug($nodeType)->first()->id;
     $node = Node::where(['slug' => $nodeSlug,'node_type_id' => $nodeTypeId])->first();
 
-    if (!$node){
+    if (! $node) {
         abort(404, __('Page non trouvée'));
     }
 
