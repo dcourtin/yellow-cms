@@ -20,7 +20,7 @@
             <label class=" ">{{__('État')}}
                <select name="status" class="  p-2 w-full border-gray-200">
                   <option {{optional($node)->status=='published'?'selected':''}} value="published">{{__('Publié')}}</option>
-                  <option {{optional($node)->status=='private'?'selected':''}} value="private">{{__('Private')}}</option>
+                  <option {{optional($node)->status=='private'?'selected':''}} value="private">{{__('Privé')}}</option>
                   <option {{optional($node)->status=='draft'?'selected':''}} value="draft">{{__('Brouillon')}}</option>
                   <option {{optional($node)->status=='trash'?'selected':''}} value="trash">{{__('Corbeille')}}</option>
                </select>
