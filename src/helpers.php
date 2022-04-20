@@ -40,10 +40,7 @@ function getNode($nodeType, $nodeSlug)
     $nodeSlug = trim($nodeSlug);
 
     $nodeTypeId = NodeType::whereSlug($nodeType)->first()->id;
-    $node = Node::where(['slug' => $nodeSlug,'id' => $nodeTypeId])->first();
-
-    dump($nodeTypeId, $nodeType, $nodeSlug ,$node);
-    dump($node->toSql());
+    $node = Node::where(['slug' => $nodeSlug,'node_type_id' => $nodeTypeId])->first();
 
     if (!$node){
         abort(404, __('Page non trouvée'));
