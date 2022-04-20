@@ -44,12 +44,13 @@ class AdminNodeController extends Controller
         $nodeType = NodeType::findOrFail($nodeTypeId);
         $newNode = new Node();
         $newNode->status = 'draft';
+
         return view(
             'yellowcms::admin/node/edit',
             [
                 'pageTitle' => 'Nouveau contenu de type : '.$nodeType->name,
                 'nodeType' => $nodeType,
-                'node' =>  $newNode
+                'node' => $newNode,
             ]
         );
     }
