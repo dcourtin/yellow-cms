@@ -6,7 +6,8 @@ use Illuminate\View\Component;
 
 class AdminStatusIcon extends Component
 {
-   public $status;
+    public $status;
+
     /**
      * Create a new component instance.
      *
@@ -14,7 +15,6 @@ class AdminStatusIcon extends Component
      */
     public function __construct($status)
     {
-
     }
 
     /**

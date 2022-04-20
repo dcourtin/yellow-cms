@@ -10,8 +10,8 @@ use Dcourtin\YellowCms\View\Components\AdminFormTextarea;
 use Dcourtin\YellowCms\View\Components\AdminLayout;
 use Dcourtin\YellowCms\View\Components\AdminLogo;
 use Dcourtin\YellowCms\View\Components\AdminNavigation;
-use Dcourtin\YellowCms\View\Components\Breadcrumb;
 use Dcourtin\YellowCms\View\Components\AdminStatusIcon;
+use Dcourtin\YellowCms\View\Components\Breadcrumb;
 
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -71,7 +71,7 @@ class YellowCmsServiceProvider extends PackageServiceProvider
             AdminLogo::class,
             AdminNavigation::class,
             Breadcrumb::class,
-            AdminStatusIcon::class
+            AdminStatusIcon::class,
         ]);
     }
 
