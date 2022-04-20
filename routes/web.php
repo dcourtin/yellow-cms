@@ -10,7 +10,7 @@ Route::get('/{nodeType}/{page?}/index',[NodeController::class, 'nodeList'])
         ->where('page', '[0-9]+')
         ->name('nodeList');
 
-Route::get('/{nodeType}/{nodeSlug}/show',[NodeController::class, 'nodeShow'])
+Route::get('/{nodeType}/{nodeSlug}',[NodeController::class, 'nodeShow'])
         ->name('nodeShow');
 
 /** NODE_TYPES */
