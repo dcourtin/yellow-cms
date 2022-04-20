@@ -30,8 +30,6 @@ class Node extends Model
             'field_name' => $fieldName,
         ])->first();
 
-
-
         return $field;
     }
 }
