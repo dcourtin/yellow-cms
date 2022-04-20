@@ -48,7 +48,7 @@ class AdminNodeTypeController extends Controller
         }
 
         $nodeType->name = $request->get('name');
-        $nodeType->slug = $request->get('slug') ?? Str::slug($nodeType->title);
+        $nodeType->slug = $request->get('slug') ?? Str::slug($nodeType->name);
         $nodeType->description = $request->get('description');
         $nodeType->save();
 
