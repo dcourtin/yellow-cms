@@ -4,6 +4,9 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+use Dcourtin\YellowCms\Models\NodeType;
+use Dcourtin\YellowCms\Models\NodeFieldDefinition;
+
 class CreateNodeTypesNodeFieldDefinitions extends Migration
 {
     /**
@@ -16,8 +19,8 @@ class CreateNodeTypesNodeFieldDefinitions extends Migration
         Schema::create('node_types_node_field_definitions', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignIdFor(App\Models\NodeType::class);
-            $table->foreignIdFor(App\Models\NodeFieldDefinition::class);
+            $table->foreignIdFor(NodeType::class);
+            $table->foreignIdFor(NodeFieldDefinition::class);
         });
     }
 
