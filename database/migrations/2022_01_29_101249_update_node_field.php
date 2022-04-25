@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Dcourtin\YellowCms\Models\NodeFieldDefinition;
 
 class UpdateNodeField extends Migration
 {
@@ -15,7 +16,7 @@ class UpdateNodeField extends Migration
     {
         Schema::table('node_fields', function($table){
             $table->dropColumn('field_type');
-            $table->foreignIdFor(App\Models\NodeFieldDefinition::class); 
+            $table->foreignIdFor( NodeFieldDefinition::class);
         });
     }
 
