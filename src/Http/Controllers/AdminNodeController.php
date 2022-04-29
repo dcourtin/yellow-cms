@@ -74,6 +74,7 @@ class AdminNodeController extends Controller
         $node->slug = $request->get('slug') ?? Str::slug($node->title);
         $node->content = $request->get('content');
         $node->status = $request->get('status', 'draft');
+        $node->lang_id = 1;
         $node->save();
 
         return redirect()->route('node_show', ['id' => $node->id]);
