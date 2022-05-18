@@ -38,11 +38,11 @@ function getNode($nodeType, $nodeSlug)
 {
     $nodeType = trim($nodeType);
     $nodeSlug = trim($nodeSlug);
-   
-    if(empty($nodeType)){
+
+    if (empty($nodeType)) {
         return redirect()->route('node_type_create');
     }
- 
+
     $nodeTypeId = NodeType::whereSlug($nodeType)->first()->id;
     $node = Node::where(['slug' => $nodeSlug,'node_type_id' => $nodeTypeId])->first();
 
