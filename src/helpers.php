@@ -10,7 +10,7 @@ function nodeListRoute($nodeType, $page)
     return route('nodeList', ['nodeType' => $nodeType,'page' => $page]);
 }
 
-function nodeShowRoute()
+function nodeShowRoute($nodeType, $nodeSlug)
 {
     return route('nodeShow', ['nodeType' => $nodeType,'nodeSlug' => $nodeSlug]);
 }
@@ -82,4 +82,5 @@ function hook($hook)
 function yellowHook($hook)
 {
     //echo $hook;
+    event($kook);
 }
