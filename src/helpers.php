@@ -82,5 +82,5 @@ function hook($hook)
 function yellowHook($hook)
 {
     //echo $hook;
-    event($kook);
+   # event($kook);
 }
