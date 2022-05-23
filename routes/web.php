@@ -1,6 +1,6 @@
 <?php
 
-use Dcourtin\YellowCms\Http\Controllers\NodeController;
+#use Dcourtin\YellowCms\Http\Controllers\NodeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeTypeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeFieldController;
@@ -8,13 +8,14 @@ use Dcourtin\YellowCms\Http\Controllers\AdminNodeFieldController;
 
 Route::group(['middleware' => 'web'], function () {
         /** ACCÈS FRONT */
+        /*
         Route::get('/{nodeType}/{page?}/index',[NodeController::class, 'nodeList'])
                 ->where('page', '[0-9]+')
                 ->name('nodeList');
 
         Route::get('/{nodeType}/{nodeSlug}',[NodeController::class, 'nodeShow'])
                 ->name('nodeShow');
-
+        */
         /** NODE_TYPES */
         Route::get('/admin/node_type/index', [AdminNodeTypeController::class, 'index'])
                 ->name('node_type_index');
