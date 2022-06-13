@@ -25,7 +25,7 @@
         "php": "^8.1",
         "spatie/laravel-package-tools": "^1.9.2",
         "illuminate/contracts": "^8.0",
-        "cesargb/laravel-magiclink":"dev"
+        "cesargb/laravel-magiclink":"dev-master"
     },
     "require-dev": {
         "nunomaduro/collision": "^6.0",
