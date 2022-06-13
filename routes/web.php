@@ -6,7 +6,7 @@ use Dcourtin\YellowCms\Http\Controllers\AdminNodeTypeController;
 use Dcourtin\YellowCms\Http\Controllers\AdminNodeFieldController;
 
 
-Route::group(['middleware' => 'web'], function () {
+Route::group(['middleware' => ['auth','web']], function () {
         /** ACCÈS FRONT */
         /*
         Route::get('/{nodeType}/{page?}/index',[NodeController::class, 'nodeList'])
